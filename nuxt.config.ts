@@ -8,20 +8,13 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
+  // build 時の様々な設定
   build: {
     transpile: ['vuetify'],
   },
   hooks: {
     'vite:extendConfig': (config) => {
       config.plugins!.push(vuetify());
-    },
-  },
-  vite: {
-    ssr: {
-      noExternal: ['vuetify'],
-    },
-    define: {
-      'process.env.DEBUG': false,
     },
   },
   css: [

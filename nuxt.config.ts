@@ -3,12 +3,13 @@ import vuetify from 'vite-plugin-vuetify';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // ページ直下の devtools
   devtools: { enabled: true },
+  // TypeScript の設定
   typescript: {
     strict: true,
     typeCheck: true,
   },
-  // build 時の様々な設定
   build: {
     transpile: ['vuetify'],
   },
@@ -17,6 +18,7 @@ export default defineNuxtConfig({
       config.plugins!.push(vuetify());
     },
   },
+  // グローバルに設定する css
   css: [
     '@/assets/css/style.css',
     '@/assets/main.scss',

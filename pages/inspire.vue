@@ -1,21 +1,9 @@
 <template>
   <v-row>
     <v-col class="text-center">
-      <img src="/v.png" alt="Vuetify.js" class="mb-5" />
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
+      <p class="text-h4">-----不明点-----</p>
+      <p>・ <code>nuxt.config.ts</code> における <code>hooks</code> の機能</p>
+      <p>・ <code>nuxt.config.ts</code> における <code>build</code> の機能</p>
     </v-col>
   </v-row>
 </template>
-
-<script>
-export default {
-  name: 'InspirePage',
-}
-</script>

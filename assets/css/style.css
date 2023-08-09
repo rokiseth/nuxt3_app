@@ -18,3 +18,8 @@ pre {
   background-color: black;
   color: #fff;
 }
+code {
+  background-color: rgb(233, 230, 230);
+  padding: 3px;
+  font-weight: bold;
+}

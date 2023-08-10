@@ -6,7 +6,7 @@
     -->
     <v-app-bar elevation="3" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer />
       <v-btn icon @click.stop="">
         <v-icon>mdi-invert-colors</v-icon>
@@ -24,7 +24,7 @@
           <template v-slot:prepend>
             <v-icon :icon="item.icon"></v-icon>
           </template>
-          <v-list-item-title v-text="item.title"></v-list-item-title>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -60,18 +60,8 @@ const items = ref([
   },
   {
     icon: 'mdi-nuxt',
-    title: '[Nuxt3] Plugin',
-    to: '/nuxt3/plugin',
-  },
-  {
-    icon: 'mdi-nuxt',
-    title: '[Nuxt3] Composable',
-    to: '/nuxt3/composable',
-  },
-  {
-    icon: 'mdi-nuxt',
-    title: '[Nuxt3] Nitro',
-    to: '/nuxt3/nitro',
+    title: 'Nuxt3',
+    to: '/nuxt3',
   },
 ]);
 </script>

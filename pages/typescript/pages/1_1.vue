@@ -2,15 +2,12 @@
   <div class="mt-3 ml-3 mr-3">
     <div class="text-left">
       <p class="text-h5" style="font-weight: bold">
-        <span class="title">▍</span>
-        <v-icon icon="">fa:fas fa-lock</v-icon>型注釈とlet
+        <span class="title">▍</span>型注釈とlet
       </p>
       <hr style="margin-bottom: 30px" />
       <p>
         letを使う場合は後で再代入される意思表示をしないと、読む人に負担をかける。
-        極力constを使おう。<v-icon icon="$vuetify"></v-icon
-        ><v-icon icon="mdi-check-circle"></v-icon
-        ><i class="bi bi-0-circle-fill"></i>
+        極力constを使おう。
       </p>
       <v-icon class="mb-1">mdi-folder-file-outline</v-icon
       ><span class="filename">1_1.vue</span>

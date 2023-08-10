@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="12" md="12" class="text-center">
+    <v-col cols="12" class="text-center">
       <v-card class="logo py-4 d-flex justify-center">
         <NuxtLogo class="py-2" />
       </v-card>

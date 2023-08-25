@@ -1,26 +1,18 @@
 <template>
   <div class="mt-3 ml-3 mr-3">
     <div class="text-left">
-      <p class="text-h5" style="font-weight: bold">
-        <span class="title">▍</span>プリミティブ型
-      </p>
-      <hr style="margin-bottom: 20px" />
-      <p>
-        プリミティブとは「原始的な」という意味で、ここでは最も基本的な値を表す用語として使用されている。<br />
-        主に「文字列、数値、真偽値、BigInt、null、undefined」である。
-      </p>
-      <p class="text-h5" style="font-weight: bold; margin-top: 40px">
-        <span class="title">▍</span>数値リテラル
-      </p>
-      <hr style="margin-bottom: 20px" />
-      <p>
-        リテラルとは、何らかの値を生み出すための式のことである。<br />
-        ここでは、2進数、8進数、16進数のリテラルと、極端に大きい数字、小さい数字を紹介する。
-      </p>
-      <v-icon class="mb-1">mdi-folder-file-outline</v-icon
-      ><span class="filename">1_2.vue</span>
-      <pre style="font-size: 14px">
-const binary = <span class="highlight">0b1010</span>; <span class="comment">// 2進数リテラル</span>
+      <TypeScriptHeader title="プリミティブ型"
+        >プリミティブとは「原始的な」という意味で、ここでは最も基本的な値を表す用語として使用されている。<br />
+        主に「文字列、数値、真偽値、BigInt、null、undefined」である。</TypeScriptHeader
+      >
+      <TypeScriptHeader title="数値リテラル"
+        >リテラルとは、何らかの値を生み出すための式のことである。<br />
+        ここでは、2進数、8進数、16進数のリテラルと、極端に大きい数字、小さい数字を紹介する。</TypeScriptHeader
+      >
+      <SampleCode filename="1_2.vue"></SampleCode>
+      <pre
+        style="font-size: 14px"
+      >const binary = <span class="highlight">0b1010</span>; <span class="comment">// 2進数リテラル</span>
 const octal = <span class="highlight">0o755</span>; <span class="comment">// 8進数リテラル</span>
 const hexadecimal = <span class="highlight">0xff</span>; <span class="comment">// 16進数リテラル</span>
 console.log(binary, octal, hexadecimal); <span class="comment">// 10 493 255</span>
@@ -31,34 +23,28 @@ console.log(big, small); <span class="comment">// 100000000 0.00004</span>
 
 const million = <span class="highlight">1_000_000</span>; <span class="comment">// この書き方も許される</span>
 console.log(million); <span class="comment">// 1000000</span></pre>
-      <p class="text-h5" style="font-weight: bold; margin-top: 40px">
-        <span class="title">▍</span>任意精度整数（BigInt）
-      </p>
-      <hr style="margin-bottom: 20px" />
-      <p>
-        BigIntとは、ES2020になってつかされた数値型である。<br />
-        どれだけ大きな値でも、誤差なく表すことができる。一方で、計算速度はnumberの方が速い。
-      </p>
-      <v-icon class="mb-1">mdi-folder-file-outline</v-icon
-      ><span class="filename">1_2.vue</span>
-      <pre style="font-size: 14px">
-const bignum: <span class="highlight">bigint</span> = (123n + 456n) * 2n; <span class="comment">// BigIntリテラル</span>
+      <br />
+      <TypeScriptHeader title="任意精度整数（BigInt）"
+        >BigIntとは、ES2020になって追加された数値型である。<br />
+        どれだけ大きな値でも、誤差なく表すことができる。一方で、計算速度はnumberの方が速い。</TypeScriptHeader
+      >
+      <SampleCode filename="1_2.vue"></SampleCode>
+      <pre
+        style="font-size: 14px"
+      >const bignum: <span class="highlight">bigint</span> = (123n + 456n) * 2n; <span class="comment">// BigIntリテラル</span>
 console.log(bignum); <span class="comment">// 1158n</span>
 
 const result = 5n / 2n; <span class="comment">// 丸め処理がされる</span>
 console.log(result); <span class="comment">// 2n</span></pre>
-      <p class="text-h5" style="font-weight: bold; margin-top: 40px">
-        <span class="title">▍</span>文字列型とテンプレートリテラル
-      </p>
-      <hr style="margin-bottom: 20px" />
-      <p>
-        クオートで囲む書き方が文字列リテラル（文字を認識させるための書き方）である。<br />
-        テンプレートリテラルは、バッククオートで囲むことで改行をしたり、特定の文字列が使用可能。${式}という構文を用いて変数が使用できる。
-      </p>
-      <v-icon class="mb-1">mdi-folder-file-outline</v-icon
-      ><span class="filename">1_2.vue</span>
-      <pre style="font-size: 14px">
-const str1: <span class="highlight">string</span> = 'Hello'; <span class="comment">// 文字列リテラル</span>
+      <br />
+      <TypeScriptHeader title="文字列型とテンプレートリテラル"
+        >クオートで囲む書き方が文字列リテラル（文字を認識させるための書き方）である。<br />
+        テンプレートリテラルは、バッククオートで囲むことで改行をしたり、特定の文字列が使用可能。${式}という構文を用いて変数が使用できる。</TypeScriptHeader
+      >
+      <SampleCode filename="1_2.vue"></SampleCode>
+      <pre
+        style="font-size: 14px"
+      >const str1: <span class="highlight">string</span> = 'Hello'; <span class="comment">// 文字列リテラル</span>
 const str2: <span class="highlight">string</span> = 'world!';
 console.log(str1 + ',' + str2); <span class="comment">// Hello,world!</span>
 
@@ -66,15 +52,11 @@ const message: <span class="highlight">string</span> = <span class="highlight">`
 console.log(message);
 
 console.log(<span class="highlight">`${str1}, ${str2}`</span>); <span class="comment">// Hello, world!</span></pre>
-      <p class="text-h5" style="font-weight: bold; margin-top: 40px">
-        <span class="title">▍</span>真偽値リテラル、null、undefined
-      </p>
-      <hr style="margin-bottom: 20px" />
-      <p>
-        nullとundefinedがあるが、TypeScriptではundefinedの方がサポートが手厚い。<br />
-      </p>
-      <v-icon class="mb-1">mdi-f-fiolderle-outline</v-icon
-      ><span class="filename">1_2.vue</span>
+      <br />
+      <TypeScriptHeader title="真偽値リテラル、null、undefined"
+        >nullとundefinedがあるが、TypeScriptではundefinedの方がサポートが手厚い。</TypeScriptHeader
+      >
+      <SampleCode filename="1_2.vue"></SampleCode>
       <pre
         style="font-size: 14px"
       >const no: <span class="highlight">boolean</span> = false;
@@ -88,20 +70,15 @@ console.log(val1, val2); <span class="comment">// null undefined</span>
 const n: <span class="highlight">null</span> = null;
 const u: <span class="highlight">undefined</span> = undefined;
 console.log(n, u); <span class="comment">// null undefined</span></pre>
-      <p class="text-h5" style="font-weight: bold; margin-top: 40px">
-        <span class="title">▍</span>プリミティブ同士の変換
-      </p>
-      <hr style="margin-bottom: 20px" />
-      <p>
-        【暗黙の変換】<br />
+      <br />
+      <TypeScriptHeader title="プリミティブ同士の変換"
+        >【暗黙の変換】<br />
         lineが文字列なので、(line + 1000)とするときに型変換が行われる。<br />
         【明示的な変換】<br />
-        Number関数で数値に変換する。
-      </p>
-      <v-icon class="mb-1">mdi-f-fiolderle-outline</v-icon
-      ><span class="filename">1_2.vue</span>
-      <pre style="font-size: 14px">
-import { createInterface } from 'readline';
+        Number関数で数値に変換する。</TypeScriptHeader
+      >
+      <SampleCode filename="1_2.vue"></SampleCode>
+      <pre style="font-size: 14px">import { createInterface } from 'readline';
 const rl = createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -141,6 +118,7 @@ console.log(str3); <span class="comment">// 1234.5</span>
 
 <span class="comment">// 真偽値の変換は0,null,undefinedのようなものがfalseになる</span>
 console.log(<span class="highlight">Boolean(0)</span>); <span class="comment">// false</span></pre>
+      <br />
     </div>
   </div>
 </template>
